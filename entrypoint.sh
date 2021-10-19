@@ -1,5 +1,5 @@
 #!/bin/sh -l
 
-echo "Hello $1"
-time=$(date)
-echo "::set-output name=time::$time"
+echo "Domain: $1"
+updates_available="no"
+echo "::set-output name=updates_available::$updates_available"
