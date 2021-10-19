@@ -1,0 +1,15 @@
+# action.yml
+name: 'WP Updater'
+description: 'Check if there are WordPress updates available for your website'
+inputs:
+  domain:  # id of input
+    description: 'Domain name of the website'
+    required: true
+outputs:
+  updates_available: # id of output
+    description: 'Whether there are updates available or not'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.domain }}
